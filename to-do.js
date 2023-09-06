@@ -4,7 +4,7 @@ let listItem=document.getElementById("listItem");
 let totalTaskItem=document.getElementById('totalTaskItem');
 let completedTaskItem=document.getElementById('completedTaskItem');
 
-// Add Task to list container
+// Add to-do items to list container
 function addTask()
 {
     if(textBox.value=='')
@@ -26,7 +26,7 @@ function addTask()
     saveTask();
 }
 
-// remove task and check completed task
+// remove to-do items and strike out the completed task
 listItem.addEventListener("click",function(e)
 {
     if(e.target.tagName==='LI')
@@ -44,7 +44,7 @@ listItem.addEventListener("click",function(e)
     }
 });
 
-// Count total number of task items in list container
+// Count total number of to-do items in list container
 function totalTaskCount()
 {
     let totalList=document.getElementsByTagName('li');
@@ -52,7 +52,7 @@ function totalTaskCount()
     totalTaskItem.innerHTML=total_task_count;
 }
 
-//Count completed task count 
+//Count completed to-do item count 
 function completedTaskCount()
 {
     let completed_list=document.getElementsByClassName('checked');
